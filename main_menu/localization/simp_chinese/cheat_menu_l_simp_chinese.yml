@@ -1,0 +1,60 @@
+﻿l_simp_chinese:
+    # 作弊菜单
+    CHEAT_MENU_TITLE: "作弊菜单"
+    CHEAT_MENU_BUTTON: "作弊菜单"
+    CHEAT_MENU_BUTTON_TOOLTIP: "打开作弊菜单以访问各种作弊和调试命令"
+
+    # 分类
+    CHEAT_SECTION_ECONOMY: "经济"
+    CHEAT_SECTION_STABILITY: "稳定度与威望"
+    CHEAT_SECTION_POWER: "君主点数"
+    CHEAT_SECTION_DEVELOPMENT: "发展"
+    CHEAT_SECTION_MILITARY: "军事"
+    CHEAT_SECTION_VISION: "地图视野"
+    CHEAT_SECTION_OTHER: "其他作弊"
+
+    # 经济作弊
+    CHEAT_ADD_GOLD: "添加 10,000 金币"
+    CHEAT_ADD_GOLD_TOOLTIP: "向您的国库添加 10,000 金币"
+    CHEAT_ADD_MANPOWER: "添加 50,000 人力"
+    CHEAT_ADD_MANPOWER_TOOLTIP: "向您的储备添加 50,000 人力"
+    CHEAT_ADD_SAILORS: "添加 50,000 水手"
+    CHEAT_ADD_SAILORS_TOOLTIP: "向您的储备添加 50,000 水手"
+
+    # 稳定度作弊
+    CHEAT_ADD_STABILITY: "最大稳定度"
+    CHEAT_ADD_STABILITY_TOOLTIP: "将稳定度设置为最大值 (3)"
+    CHEAT_ADD_LEGITIMACY: "最大正统性"
+    CHEAT_ADD_LEGITIMACY_TOOLTIP: "将正统性设置为 100"
+    CHEAT_ADD_PRESTIGE: "添加 100 威望"
+    CHEAT_ADD_PRESTIGE_TOOLTIP: "向您的国家添加 100 威望"
+
+    # 君主点数作弊
+    CHEAT_ADD_POWER: "添加 999 点数"
+    CHEAT_ADD_POWER_TOOLTIP: "添加 999 行政、外交和军事点数"
+
+    # 发展作弊
+    CHEAT_INSTANT_BUILD: "切换即时建造"
+    CHEAT_INSTANT_BUILD_TOOLTIP: "切换建筑和单位的即时建造"
+    CHEAT_ADD_DEVELOPMENT: "添加 10 发展度"
+    CHEAT_ADD_DEVELOPMENT_TOOLTIP: "为选定省份添加 10 发展度"
+
+    # 军事作弊
+    CHEAT_ADD_PROFESSIONALISM: "最大陆军职业度"
+    CHEAT_ADD_PROFESSIONALISM_TOOLTIP: "将陆军职业度设置为 100"
+    CHEAT_WIN_WAR: "赢得所有战争"
+    CHEAT_WIN_WAR_TOOLTIP: "立即赢得所有当前战争"
+
+    # 视野作弊
+    CHEAT_REMOVE_FOG: "切换战争迷雾"
+    CHEAT_REMOVE_FOG_TOOLTIP: "切换战争迷雾可见性"
+    CHEAT_REVEAL_MAP: "揭示整个地图"
+    CHEAT_REVEAL_MAP_TOOLTIP: "揭示地图上的所有省份"
+
+    # 其他作弊
+    CHEAT_TOGGLE_AI: "切换 AI"
+    CHEAT_TOGGLE_AI_TOOLTIP: "为所有国家切换 AI 开/关"
+    CHEAT_INTEGRATE: "即时吞并"
+    CHEAT_INTEGRATE_TOOLTIP: "立即吞并附庸国"
+    CHEAT_YESMAN: "切换无条件接受"
+    CHEAT_YESMAN_TOOLTIP: "切换无条件接受模式(所有国家接受外交提议)"

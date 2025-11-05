@@ -1,0 +1,60 @@
+﻿l_english:
+    # Cheat Menu
+    CHEAT_MENU_TITLE: "Cheat Menu"
+    CHEAT_MENU_BUTTON: "Cheat Menu"
+    CHEAT_MENU_BUTTON_TOOLTIP: "Open the Cheat Menu to access various cheats and debug commands"
+
+    # Sections
+    CHEAT_SECTION_ECONOMY: "Economy"
+    CHEAT_SECTION_STABILITY: "Stability & Prestige"
+    CHEAT_SECTION_POWER: "Power Points"
+    CHEAT_SECTION_DEVELOPMENT: "Development"
+    CHEAT_SECTION_MILITARY: "Military"
+    CHEAT_SECTION_VISION: "Map Vision"
+    CHEAT_SECTION_OTHER: "Other Cheats"
+
+    # Economy Cheats
+    CHEAT_ADD_GOLD: "Add 10,000 Gold"
+    CHEAT_ADD_GOLD_TOOLTIP: "Add 10,000 gold to your treasury"
+    CHEAT_ADD_MANPOWER: "Add 50,000 Manpower"
+    CHEAT_ADD_MANPOWER_TOOLTIP: "Add 50,000 manpower to your reserves"
+    CHEAT_ADD_SAILORS: "Add 50,000 Sailors"
+    CHEAT_ADD_SAILORS_TOOLTIP: "Add 50,000 sailors to your reserves"
+
+    # Stability Cheats
+    CHEAT_ADD_STABILITY: "Max Stability"
+    CHEAT_ADD_STABILITY_TOOLTIP: "Set stability to maximum (3)"
+    CHEAT_ADD_LEGITIMACY: "Max Legitimacy"
+    CHEAT_ADD_LEGITIMACY_TOOLTIP: "Set legitimacy to 100"
+    CHEAT_ADD_PRESTIGE: "Add 100 Prestige"
+    CHEAT_ADD_PRESTIGE_TOOLTIP: "Add 100 prestige to your country"
+
+    # Power Points Cheats
+    CHEAT_ADD_POWER: "Add 999 Power Points"
+    CHEAT_ADD_POWER_TOOLTIP: "Add 999 administrative, diplomatic, and military power"
+
+    # Development Cheats
+    CHEAT_INSTANT_BUILD: "Toggle Instant Construction"
+    CHEAT_INSTANT_BUILD_TOOLTIP: "Toggle instant construction for buildings and units"
+    CHEAT_ADD_DEVELOPMENT: "Add 10 Development"
+    CHEAT_ADD_DEVELOPMENT_TOOLTIP: "Add 10 development to the selected province"
+
+    # Military Cheats
+    CHEAT_ADD_PROFESSIONALISM: "Max Army Professionalism"
+    CHEAT_ADD_PROFESSIONALISM_TOOLTIP: "Set army professionalism to 100"
+    CHEAT_WIN_WAR: "Win All Wars"
+    CHEAT_WIN_WAR_TOOLTIP: "Instantly win all current wars"
+
+    # Vision Cheats
+    CHEAT_REMOVE_FOG: "Toggle Fog of War"
+    CHEAT_REMOVE_FOG_TOOLTIP: "Toggle fog of war visibility"
+    CHEAT_REVEAL_MAP: "Reveal Entire Map"
+    CHEAT_REVEAL_MAP_TOOLTIP: "Reveal all provinces on the map"
+
+    # Other Cheats
+    CHEAT_TOGGLE_AI: "Toggle AI"
+    CHEAT_TOGGLE_AI_TOOLTIP: "Toggle AI on/off for all countries"
+    CHEAT_INTEGRATE: "Instant Integrate"
+    CHEAT_INTEGRATE_TOOLTIP: "Instantly integrate vassals"
+    CHEAT_YESMAN: "Toggle Yesman"
+    CHEAT_YESMAN_TOOLTIP: "Toggle yesman mode (all nations accept diplomatic proposals)"

@@ -1,0 +1,27 @@
+##############################
+# Cheat Menu Window
+##############################
+
+window = {
+	name = "cheat_menu_window"
+	size = { 550 750 }
+	parentanchor = center
+    using = european_gfx
+
+  widget = {
+		size = { 100% 100% }
+		allow_outside = yes`
+        text_single = {
+			margin = {5 5}
+			raw_text = "european_gfx"
+			align = center
+			text = "CHEAT_MENU_TITLE"
+        }
+
+		vbox = {
+
+		}
+
+  }
+
+}

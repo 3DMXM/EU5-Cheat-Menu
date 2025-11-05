@@ -1,0 +1,53 @@
+##############################
+# Cheat Menu Scripted Effects
+# 用于铁人模式的作弊效果
+##############################
+
+# 添加金钱
+cheat_add_gold_effect = {
+	add_treasury = 10000
+}
+
+# 添加人力
+cheat_add_manpower_effect = {
+	add_manpower = 50000
+}
+
+# 添加水手
+cheat_add_sailors_effect = {
+	add_sailors = 50000
+}
+
+# 添加稳定度
+cheat_add_stability_effect = {
+	add_stability = 3
+}
+
+# 添加正统性
+cheat_add_legitimacy_effect = {
+	add_legitimacy = 100
+}
+
+# 添加威望
+cheat_add_prestige_effect = {
+	add_prestige = 100
+}
+
+# 添加君主点数
+cheat_add_power_effect = {
+	add_adm_power = 999
+	add_dip_power = 999
+	add_mil_power = 999
+}
+
+# 添加发展度(需要在省份层面使用)
+cheat_add_development_effect = {
+	add_base_tax = 5
+	add_base_production = 5
+	add_base_manpower = 5
+}
+
+# 添加陆军职业度
+cheat_add_professionalism_effect = {
+	add_army_professionalism = 1.0
+}

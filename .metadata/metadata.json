@@ -1,0 +1,11 @@
+﻿{
+	"name":	"Cheat Menu",
+	"id":	"xm.cheatmenu",
+	"version":	"1.0",
+	"supported_game_version":	"1.*.*",
+	"short_description":	"A simple in-game cheat menu for testing and fun.",
+	"tags":	["Characters", "User Interface"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}
