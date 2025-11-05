@@ -1,27 +1,527 @@
-##############################
+﻿##############################
 # Cheat Menu Window
 ##############################
 
 window = {
-	name = "cheat_menu_window"
-	size = { 550 750 }
-	parentanchor = center
-    using = european_gfx
+    name = "cheat_menu_window"
+    size = { 650 850 }
+    parentanchor = center
+    layer = windows_layer
+    movable = yes
 
-  widget = {
-		size = { 100% 100% }
-		allow_outside = yes`
-        text_single = {
-			margin = {5 5}
-			raw_text = "european_gfx"
-			align = center
-			text = "CHEAT_MENU_TITLE"
+    state = {
+        name = _show
+        using = Animation_FadeIn_Standard
+    }
+
+    state = {
+        name = _hide
+        using = Animation_FadeOut_Standard
+    }
+
+    # Main window background with styling
+    using = bg_window_default_alt
+    allow_outside = yes
+
+    # Main container
+    vbox = {
+        using = window_margin_alt
+
+        # Header with close button
+        window_header_alt = {
+            blockoverride "header_text" {
+                text = "CHEAT_MENU_TITLE"
+            }
+
+            blockoverride "button_close" {
+                button_close_alt = {
+                    blockoverride "close_onclick" {
+                        onclick = "[PopupManager.Close('cheat_menu_window')]"
+                    }
+                }
+            }
         }
 
-		vbox = {
+        # Main content area with tabs
+        vbox = {
+            using = layoutpolicy_expanding
+            using = bg_main_inner_notabs_alt
+            using = window_main_tabs_margin_alt
 
-		}
+            # Scrollable content area
+            scrollbox = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
 
-  }
+                blockoverride "scrollbox_content" {
+                    vbox = {
+                        layoutpolicy_horizontal = expanding
+                        spacing = 8
+                        margin = { 10 10 }
 
+                        ### ECONOMY SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_ECONOMY"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/gold.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_GOLD"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_GOLD_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('cash 10000')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/gold.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_MANPOWER"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_MANPOWER_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('manpower 50000')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/manpower.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_SAILORS"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_SAILORS_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('sailors 50000')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/navy.dds"
+                            }
+                        }
+
+                        ### STABILITY SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_STABILITY"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/stability.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_STABILITY"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_STABILITY_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('stability 3')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/stability.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_LEGITIMACY"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_LEGITIMACY_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('legitimacy 100')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/legitimacy.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_PRESTIGE"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_PRESTIGE_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('prestige 100')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/prestige.dds"
+                            }
+                        }
+
+                        ### POWER POINTS SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_POWER"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/power_points.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_POWER"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_POWER_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('power 999')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/power_points.dds"
+                            }
+                        }
+
+                        ### DEVELOPMENT SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_DEVELOPMENT"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/development.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_INSTANT_BUILD"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_INSTANT_BUILD_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('instant_build')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/construction.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_DEVELOPMENT"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_DEVELOPMENT_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('development 10')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/development.dds"
+                            }
+                        }
+
+                        ### MILITARY SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_MILITARY"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/military.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_ADD_PROFESSIONALISM"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_ADD_PROFESSIONALISM_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('professionalism 100')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/army.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_WIN_WAR"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_WIN_WAR_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('winwars')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/war.dds"
+                            }
+                        }
+
+                        ### VISION SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_VISION"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/map.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_REMOVE_FOG"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_REMOVE_FOG_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('fow')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/fog_of_war.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_REVEAL_MAP"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_REVEAL_MAP_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('discover')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/map.dds"
+                            }
+                        }
+
+                        ### OTHER SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_OTHER"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/settings.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_TOGGLE_AI"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_TOGGLE_AI_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('ai')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/ai.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_INTEGRATE"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_INTEGRATE_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('integrate')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/diplomacy.dds"
+                            }
+                        }
+
+                        cheat_button = {
+                            blockoverride "button_text" {
+                                text = "CHEAT_YESMAN"
+                            }
+                            blockoverride "button_tooltip" {
+                                text = "CHEAT_YESMAN_TOOLTIP"
+                            }
+                            blockoverride "button_action" {
+                                onclick = "[ExecuteConsoleCommand('yesman')]"
+                            }
+                            blockoverride "button_icon" {
+                                texture = "gfx/interface/icons/flat_icons/diplomacy.dds"
+                            }
+                        }
+
+                        # Bottom spacer
+                        widget = {
+                            size = { 1 15 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+##############################
+# Cheat Section Header Template
+##############################
+types cheat_section_header {
+    type cheat_section_header = widget {
+        layoutpolicy_horizontal = expanding
+        size = { -1 40 }
+        margin_top = 8
+        margin_bottom = 5
+
+        background = {
+            using = color_light_blue_texture
+            alpha = 0.8
+
+            modify_texture = {
+                texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+                blend_mode = alphamultiply
+            }
+        }
+
+        hbox = {
+            margin = { 10 8 }
+            spacing = 8
+
+            icon = {
+                size = { 24 24 }
+                parentanchor = vcenter
+
+                block "section_icon" {
+                    texture = "gfx/interface/icons/flat_icons/settings.dds"
+                }
+
+                modify_texture = {
+                    texture = "gfx/interface/colors/new_gold.dds"
+                    blend_mode = overlay
+                }
+            }
+
+            text_single = {
+                parentanchor = vcenter
+                align = nobaseline
+                using = Font_Type_Headers
+                using = Font_Size_Medium
+                default_format = "#high"
+
+                block "section_title" {
+                    text = "Section Title"
+                }
+            }
+        }
+    }
+}
+
+##############################
+# Cheat Button Template
+##############################
+types cheat_button {
+    type cheat_button = button_regular {
+        layoutpolicy_horizontal = expanding
+        size = { -1 45 }
+
+        background = {
+            using = bg_round_corners
+            alpha = 0.4
+
+            modify_texture = {
+                texture = "gfx/interface/component_tiles/tile_background_center.dds"
+                texture_density = 2
+                alpha = 0.6
+            }
+        }
+
+        # Hover state animation
+        state = {
+            name = _mouse_hierarchy_enter
+            using = Animation_Curve_Default
+            alpha = 0.9
+            duration = 0.15
+
+            modify_texture = {
+                texture = "gfx/interface/colors/new_gold.dds"
+                alpha = 0.2
+                blend_mode = overlay
+            }
+        }
+
+        state = {
+            name = _mouse_hierarchy_leave
+            using = Animation_Curve_Default
+            alpha = 1.0
+            duration = 0.15
+        }
+
+        hbox = {
+            margin = { 12 8 }
+            spacing = 10
+
+            # Icon
+            icon = {
+                size = { 28 28 }
+                parentanchor = vcenter
+
+                block "button_icon" {
+                    texture = "gfx/interface/icons/flat_icons/settings.dds"
+                }
+
+                modify_texture = {
+                    texture = "gfx/interface/colors/new_gold.dds"
+                    blend_mode = overlay
+                    alpha = 0.6
+                }
+            }
+
+            # Button text
+            text_single = {
+                layoutpolicy_horizontal = expanding
+                parentanchor = vcenter
+                align = left|nobaseline
+                using = Font_Type_Standard
+                using = Font_Size_Medium
+                default_format = "#clickable"
+
+                block "button_text" {
+                    text = "Cheat Button"
+                }
+            }
+
+            # Arrow indicator
+            icon = {
+                size = { 20 20 }
+                parentanchor = vcenter
+                texture = "gfx/interface/icons/flat_icons/arrow_right.dds"
+                alpha = 0.5
+            }
+        }
+
+        block "button_action" {
+            onclick = ""
+        }
+
+        block "button_tooltip" {
+            tooltip = ""
+        }
+    }
 }

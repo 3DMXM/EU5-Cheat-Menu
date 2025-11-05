@@ -1,11 +1,14 @@
 ﻿{
-	"name":	"Cheat Menu",
-	"id":	"xm.cheatmenu",
-	"version":	"1.0",
-	"supported_game_version":	"1.*.*",
-	"short_description":	"A simple in-game cheat menu for testing and fun.",
-	"tags":	["Characters", "User Interface"],
-	"relationships":	[],
-	"game_custom_data":	{
-}
+	"name": "Cheat Menu / 作弊菜单",
+	"id": "xm.cheatmenu",
+	"version": "1.0.0",
+	"supported_game_version": "1.0.*",
+	"short_description": "A comprehensive in-game cheat menu with bilingual support. 功能完整的游戏内作弊菜单,支持中英双语。",
+	"tags": [
+		"Gameplay",
+		"Utilities",
+		"User Interface"
+	],
+	"relationships": [],
+	"game_custom_data": {}
 }

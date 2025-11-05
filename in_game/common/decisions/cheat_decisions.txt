@@ -1,0 +1,40 @@
+mydecision = {
+    title = mydecision_name   #决议名称的loc_key
+    desc = mydecision_desc  #决议的描述loc_key
+    selection_tooltip = mydecision_tip #决议的提示loc_key
+    confirm_text = mydecision_confirm #决议继续的文本loc_key
+    picture = "gfx/interface/illustrations/decisions/decision_misc.dds"   #决议会使用那张图片
+
+    sort_order = 1000 #决议的排列顺序 大则靠前
+
+    major = no #是否为重要决议
+
+    ai_check_interval = 30 #ai每隔多久一次查看这个决议，单位是 月，设置为0则永远不会查看这个决议
+
+    cost = {          #进行决议的消耗
+        #例如 gold = 500
+    }
+
+    cooldown = { #决议的冷却时间
+        #例如 years = 5
+    }
+
+    is_shown = {       #显示决议的条件
+
+    }
+
+    is_valid_showing_failures_only = {   #如果不满足此处的条件那么不能进行这个决议，但是不影响决议的显示
+
+    }
+
+    ai_potential = {     #ai是否会考虑这个决议
+        always = yes
+    }
+
+    ai_will_do = {    #ai会进行这个决议吗？
+        base = 20     #数值为被变成百分比的可能 此处为20%
+    }
+    effect = {          #决议的实际效果
+
+    }
+}
