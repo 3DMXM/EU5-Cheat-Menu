@@ -57,27 +57,22 @@ types MessageLogTypes
             position = { -35 0 }
             size = { 30 30 }
 
-            tooltipwidget = {
-                SimpleContextualTooltipType = {
-                    blockoverride "title_icon" {
-                        icon = {
-                            using = tooltip_title_icon_size
-                            texture = "gfx/interface/icons/flat_icons/tabicons/news_flat_icon.dds"
-                        }
-                    }
-                    lowpriotextcontext = "CHEAT_MENU_TITLE"
-                }
-            }
-
             onclick = "[ExecuteConsoleCommand('gui.createwidget gui/cheat_menu_window.gui cheat_menu_window')]"
             onclick = "[ToggleWindow('cheat_menu_window_open')]"
 
             icon = {
-                size = { 75% 75% }
-                parentanchor = center
-                texture = "gfx/interface/colors/new_gold.dds"
-                using = button_panel_tab_icon_effect
+                texture = "gfx/interface/component_tiles/hud_corners/circle_progress_bg.dds"
+                texture_density = 2
+                size = {100% 100%}
             }
+
+            icon = {
+                texture = "gfx/interface/component_tiles/hud_corners/graphical_culture/circle_frame_south_american_gfx.dds"
+                texture_density = 2
+                size = {100% 100%}
+            }
+
+            tooltip = "CHEAT_MENU_BUTTON_TOOLTIP"
         }
 
         # 消息开关

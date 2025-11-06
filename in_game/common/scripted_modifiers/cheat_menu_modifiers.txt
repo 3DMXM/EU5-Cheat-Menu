@@ -1,0 +1,65 @@
+##############################
+# Cheat Menu Modifiers
+# 作弊菜单修正
+##############################
+
+cheat_research_speed_boost = {
+    # Research / 研究
+    research_speed_modifier = 5.0  # +500% 研究速度
+
+    # Icon and display
+    icon = 5
+}
+
+cheat_super_nation = {
+    # Military / 军事
+    land_morale = 0.5  # +50% 陆军士气
+    naval_morale = 0.5  # +50% 海军士气
+    discipline = 0.2  # +20% 训练度
+    land_maintenance_modifier = -0.5  # -50% 陆军维护费
+    naval_maintenance_modifier = -0.5  # -50% 海军维护费
+
+    # Economy / 经济
+    global_tax_modifier = 0.5  # +50% 全局税收
+    production_efficiency = 0.5  # +50% 生产效率
+    trade_efficiency = 0.5  # +50% 贸易效率
+
+    # Development / 发展
+    development_cost = -0.5  # -50% 发展成本
+    build_cost = -0.5  # -50% 建筑成本
+    build_time = -0.5  # -50% 建筑时间
+
+    # Diplomacy / 外交
+    diplomatic_reputation = 5  # +5 外交声誉
+    improve_relation_modifier = 0.5  # +50% 改善关系
+
+    # Other / 其他
+    core_creation = -0.5  # -50% 造核时间
+    stability_cost_modifier = -0.5  # -50% 稳定度花费
+
+    icon = 1
+}
+
+cheat_instant_construction = {
+    # Construction / 建造
+    build_time = -0.99  # -99% 建筑时间
+    build_cost = -0.75  # -75% 建筑成本
+
+    icon = 3
+}
+
+cheat_fast_recruitment = {
+    # Recruitment / 招募
+    global_regiment_recruit_speed = -0.9  # -90% 陆军招募时间
+    global_ship_recruit_speed = -0.9  # -90% 海军招募时间
+
+    icon = 4
+}
+
+cheat_reduced_unrest = {
+    # Stability / 稳定
+    global_unrest = -10  # -10 全局叛乱
+    stability_cost_modifier = -0.75  # -75% 稳定度花费
+
+    icon = 2
+}

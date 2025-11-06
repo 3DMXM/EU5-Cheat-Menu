@@ -1,0 +1,16 @@
+l_simp_chinese:
+    # 作弊菜单修正
+    cheat_research_speed_boost: "加速研究"
+    desc_cheat_research_speed_boost: "研究以惊人的速度进行。"
+
+    cheat_super_nation: "超级国家"
+    desc_cheat_super_nation: "国家的各个方面都得到显著增强。"
+
+    cheat_instant_construction: "快速建造"
+    desc_cheat_instant_construction: "建筑几乎瞬间完工。"
+
+    cheat_fast_recruitment: "快速招募"
+    desc_cheat_fast_recruitment: "军事单位的招募速度大大加快。"
+
+    cheat_reduced_unrest: "降低叛乱"
+    desc_cheat_reduced_unrest: "人口的稳定性显著提高。"

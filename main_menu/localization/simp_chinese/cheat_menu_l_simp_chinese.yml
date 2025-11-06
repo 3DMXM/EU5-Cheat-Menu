@@ -2,7 +2,7 @@
     # 作弊菜单
     CHEAT_MENU_TITLE: "作弊菜单"
     CHEAT_MENU_BUTTON: "作弊菜单"
-    CHEAT_MENU_BUTTON_TOOLTIP: "打开作弊菜单以访问各种作弊和调试命令"
+    CHEAT_MENU_BUTTON_TOOLTIP: "打开作弊菜单以访问各种作弊命令"
 
     # 分类
     CHEAT_SECTION_ECONOMY: "经济"
@@ -10,20 +10,25 @@
     CHEAT_SECTION_POWER: "君主点数"
     CHEAT_SECTION_DEVELOPMENT: "发展"
     CHEAT_SECTION_MILITARY: "军事"
-    CHEAT_SECTION_VISION: "地图视野"
+    CHEAT_SECTION_GOVERNMENT: "政府"
+    CHEAT_SECTION_RELIGION: "宗教"
+    CHEAT_SECTION_RESEARCH: "研究"
+    CHEAT_SECTION_BUFFS: "增益与修正"
+    CHEAT_SECTION_MAP: "地图与视野"
+    CHEAT_SECTION_PROVINCE: "省份"
     CHEAT_SECTION_OTHER: "其他作弊"
 
     # 经济作弊
-    CHEAT_ADD_GOLD: "添加 10,000 金币"
+    CHEAT_ADD_GOLD: "添加金币"
     CHEAT_ADD_GOLD_TOOLTIP: "向您的国库添加 10,000 金币"
-    CHEAT_ADD_MANPOWER: "添加 50,000 人力"
+    CHEAT_ADD_MANPOWER: "添加人力"
     CHEAT_ADD_MANPOWER_TOOLTIP: "向您的储备添加 50,000 人力"
-    CHEAT_ADD_SAILORS: "添加 50,000 水手"
+    CHEAT_ADD_SAILORS: "添加水手"
     CHEAT_ADD_SAILORS_TOOLTIP: "向您的储备添加 50,000 水手"
 
     # 稳定度作弊
     CHEAT_ADD_STABILITY: "最大稳定度"
-    CHEAT_ADD_STABILITY_TOOLTIP: "将稳定度设置为最大值 (3)"
+    CHEAT_ADD_STABILITY_TOOLTIP: "将稳定度设置为最大值 (100)"
     CHEAT_ADD_LEGITIMACY: "最大正统性"
     CHEAT_ADD_LEGITIMACY_TOOLTIP: "将正统性设置为 100"
     CHEAT_ADD_PRESTIGE: "添加 100 威望"
@@ -42,6 +47,10 @@
     # 军事作弊
     CHEAT_ADD_PROFESSIONALISM: "最大陆军职业度"
     CHEAT_ADD_PROFESSIONALISM_TOOLTIP: "将陆军职业度设置为 100"
+    CHEAT_ADD_ARMY_TRADITION: "添加 100 陆军传统"
+    CHEAT_ADD_ARMY_TRADITION_TOOLTIP: "向您的国家添加 100 陆军传统"
+    CHEAT_ADD_NAVY_TRADITION: "添加 100 海军传统"
+    CHEAT_ADD_NAVY_TRADITION_TOOLTIP: "向您的国家添加 100 海军传统"
     CHEAT_WIN_WAR: "赢得所有战争"
     CHEAT_WIN_WAR_TOOLTIP: "立即赢得所有当前战争"
 
@@ -52,6 +61,70 @@
     CHEAT_REVEAL_MAP_TOOLTIP: "揭示地图上的所有省份"
 
     # 其他作弊
+    CHEAT_REDUCE_WAR_EXHAUSTION: "减少厌战度"
+    CHEAT_REDUCE_WAR_EXHAUSTION_TOOLTIP: "减少 20 点厌战度"
+    CHEAT_REDUCE_CORRUPTION: "减少腐败"
+    CHEAT_REDUCE_CORRUPTION_TOOLTIP: "减少 10 点腐败"
+    CHEAT_ADD_MERCANTILISM: "添加 25 重商主义"
+    CHEAT_ADD_MERCANTILISM_TOOLTIP: "向您的国家添加 25 重商主义"
+    CHEAT_ADD_INNOVATIVENESS: "添加 100 创新度"
+    CHEAT_ADD_INNOVATIVENESS_TOOLTIP: "向您的国家添加 100 创新度"
+    CHEAT_REDUCE_INFLATION: "减少通货膨胀"
+    CHEAT_REDUCE_INFLATION_TOOLTIP: "减少 10 点通货膨胀"
+
+    # 政府作弊
+    CHEAT_ADD_REPUBLICAN_TRADITION: "添加共和传统"
+    CHEAT_ADD_REPUBLICAN_TRADITION_TOOLTIP: "添加 100 共和传统"
+    CHEAT_ADD_DEVOTION: "添加虔诚度"
+    CHEAT_ADD_DEVOTION_TOOLTIP: "添加 100 虔诚度（神权政体）"
+    CHEAT_ADD_HORDE_UNITY: "添加部落统一度"
+    CHEAT_ADD_HORDE_UNITY_TOOLTIP: "添加 100 部落统一度（游牧政体）"
+    CHEAT_ADD_REFORM_PROGRESS: "添加改革进度"
+    CHEAT_ADD_REFORM_PROGRESS_TOOLTIP: "添加 1000 改革进度"
+    CHEAT_MAX_ABSOLUTISM: "最大专制度"
+    CHEAT_MAX_ABSOLUTISM_TOOLTIP: "向您的国家添加 100 专制度"
+
+    # 宗教作弊
+    CHEAT_ADD_KARMA: "添加业力"
+    CHEAT_ADD_KARMA_TOOLTIP: "添加 100 业力（佛教国家）"
+    CHEAT_ADD_HARMONY: "添加和谐度"
+    CHEAT_ADD_HARMONY_TOOLTIP: "添加 100 和谐度（儒教国家）"
+    CHEAT_ADD_DOOM: "添加末日值"
+    CHEAT_ADD_DOOM_TOOLTIP: "添加 100 末日值（玛雅国家）"
+    CHEAT_ADD_AUTHORITY: "添加教会力量"
+    CHEAT_ADD_AUTHORITY_TOOLTIP: "添加 100 教会力量"
+    CHEAT_ADD_FERVOR: "添加热忱"
+    CHEAT_ADD_FERVOR_TOOLTIP: "添加 100 热忱（改革宗国家）"
+
+    # 研究作弊
+    CHEAT_ADD_RESEARCH_PROGRESS: "添加研究进度"
+    CHEAT_ADD_RESEARCH_PROGRESS_TOOLTIP: "向所有类别添加 1000 研究进度"
+    CHEAT_TOGGLE_RESEARCH_SPEED: "切换研究速度"
+    CHEAT_TOGGLE_RESEARCH_SPEED_TOOLTIP: "切换 +500% 研究速度修正（永久有效直到切换关闭）"
+
+    # 增益作弊
+    CHEAT_TOGGLE_SUPER_NATION: "切换超级国家"
+    CHEAT_TOGGLE_SUPER_NATION_TOOLTIP: "切换综合国家增益：\n+50% 士气，+20% 训练度\n+50% 税收/生产/贸易\n-50% 发展/建造成本\n+5 外交声誉"
+    CHEAT_TOGGLE_INSTANT_CONSTRUCTION: "切换快速建造"
+    CHEAT_TOGGLE_INSTANT_CONSTRUCTION_TOOLTIP: "切换快速建造：\n-99% 建造时间\n-75% 建造成本"
+    CHEAT_TOGGLE_FAST_RECRUITMENT: "切换快速招募"
+    CHEAT_TOGGLE_FAST_RECRUITMENT_TOOLTIP: "切换快速招募：\n-90% 陆军招募时间\n-90% 海军招募时间"
+    CHEAT_TOGGLE_REDUCED_UNREST: "切换减少叛乱"
+    CHEAT_TOGGLE_REDUCED_UNREST_TOOLTIP: "切换减少叛乱：\n-10 全局叛乱\n-75% 稳定度成本"
+
+    # 地图作弊
+    CHEAT_REVEAL_MAP: "揭示地图"
+    CHEAT_REVEAL_MAP_TOOLTIP: "发现地图上的所有省份"
+    CHEAT_LIFT_FOG_OF_WAR: "移除战争迷雾"
+    CHEAT_LIFT_FOG_OF_WAR_TOOLTIP: "从所有省份移除战争迷雾"
+
+    # 省份作弊
+    CHEAT_CHANGE_CULTURE: "转换文化"
+    CHEAT_CHANGE_CULTURE_TOOLTIP: "将选定省份转换为您的文化"
+    CHEAT_CHANGE_RELIGION: "转换宗教"
+    CHEAT_CHANGE_RELIGION_TOOLTIP: "将选定省份转换为您的宗教"
+
+    # 兼容性保留条目
     CHEAT_TOGGLE_AI: "切换 AI"
     CHEAT_TOGGLE_AI_TOOLTIP: "为所有国家切换 AI 开/关"
     CHEAT_INTEGRATE: "即时吞并"

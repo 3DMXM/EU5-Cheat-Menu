@@ -1,0 +1,16 @@
+l_english:
+    # Cheat Menu Modifiers
+    cheat_research_speed_boost: "Accelerated Research"
+    desc_cheat_research_speed_boost: "Research progresses at incredible speed."
+
+    cheat_super_nation: "Super Nation"
+    desc_cheat_super_nation: "All aspects of the nation are significantly enhanced."
+
+    cheat_instant_construction: "Fast Construction"
+    desc_cheat_instant_construction: "Buildings are constructed almost instantly."
+
+    cheat_fast_recruitment: "Fast Recruitment"
+    desc_cheat_fast_recruitment: "Military units are recruited much faster."
+
+    cheat_reduced_unrest: "Reduced Unrest"
+    desc_cheat_reduced_unrest: "The population is significantly more stable."

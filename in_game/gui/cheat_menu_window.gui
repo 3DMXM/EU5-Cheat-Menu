@@ -23,6 +23,23 @@ window = {
     using = bg_window_default_alt
     allow_outside = yes
 
+    # Close button in top-right corner
+    widget = {
+        parentanchor = top|right
+        position = { -5 5 }
+        size = { 40 40 }
+
+        button_close_alt = {
+            size = { 40 40 }
+
+            blockoverride "close_onclick" {
+                onclick = "[ExecuteConsoleCommand('gui.ClearWidgets cheat_menu_window')]"
+            }
+
+            tooltip = "CLOSE"
+        }
+    }
+
     # Main container
     vbox = {
         using = window_margin_alt
@@ -31,14 +48,6 @@ window = {
         window_header_alt = {
             blockoverride "header_text" {
                 text = "CHEAT_MENU_TITLE"
-            }
-
-            blockoverride "button_close" {
-                button_close_alt = {
-                    blockoverride "close_onclick" {
-                        onclick = "[PopupManager.Close('cheat_menu_window')]"
-                    }
-                }
             }
         }
 
@@ -69,48 +78,48 @@ window = {
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_GOLD"
-                            }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_GOLD_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('cash 10000')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/gold.dds"
-                            }
-                        }
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_MANPOWER"
-                            }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_MANPOWER_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('manpower 50000')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/manpower.dds"
-                            }
-                        }
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_GOLD"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_GOLD_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_gold_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_SAILORS"
                             }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_SAILORS_TOOLTIP"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_MANPOWER"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_MANPOWER_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_manpower_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('sailors 50000')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/navy.dds"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_SAILORS"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_SAILORS_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_sailors_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
                         }
 
@@ -124,48 +133,48 @@ window = {
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_STABILITY"
-                            }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_STABILITY_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('stability 3')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/stability.dds"
-                            }
-                        }
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_LEGITIMACY"
-                            }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_LEGITIMACY_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('legitimacy 100')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/legitimacy.dds"
-                            }
-                        }
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_STABILITY"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_STABILITY_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_max_stability_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_PRESTIGE"
                             }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_PRESTIGE_TOOLTIP"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_LEGITIMACY"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_LEGITIMACY_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_max_legitimacy_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('prestige 100')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/prestige.dds"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_PRESTIGE"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_PRESTIGE_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_prestige_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
                         }
 
@@ -179,19 +188,17 @@ window = {
                             }
                         }
 
-                        cheat_button = {
+                        cheat_button_compact = {
                             blockoverride "button_text" {
                                 text = "CHEAT_ADD_POWER"
                             }
                             blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_POWER_TOOLTIP"
+                                tooltip = "CHEAT_ADD_POWER_TOOLTIP"
                             }
                             blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('power 999')]"
+                                onclick = "[GetScriptedGui('cheat_add_power_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                             }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/power_points.dds"
-                            }
+
                         }
 
                         ### DEVELOPMENT SECTION ###
@@ -204,34 +211,17 @@ window = {
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_INSTANT_BUILD"
-                            }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_INSTANT_BUILD_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('instant_build')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/construction.dds"
-                            }
-                        }
-
-                        cheat_button = {
+                        cheat_button_compact = {
                             blockoverride "button_text" {
                                 text = "CHEAT_ADD_DEVELOPMENT"
                             }
                             blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_DEVELOPMENT_TOOLTIP"
+                                tooltip = "CHEAT_ADD_DEVELOPMENT_TOOLTIP"
                             }
                             blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('development 10')]"
+                                onclick = "[GetScriptedGui('cheat_add_development_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                             }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/development.dds"
-                            }
+
                         }
 
                         ### MILITARY SECTION ###
@@ -244,73 +234,380 @@ window = {
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_PROFESSIONALISM"
-                            }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_ADD_PROFESSIONALISM_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('professionalism 100')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/army.dds"
-                            }
-                        }
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_WIN_WAR"
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_PROFESSIONALISM"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_PROFESSIONALISM_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_max_professionalism_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_WIN_WAR_TOOLTIP"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_ARMY_TRADITION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_ARMY_TRADITION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_army_tradition_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('winwars')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/war.dds"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_NAVY_TRADITION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_NAVY_TRADITION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_navy_tradition_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
                         }
 
                         ### VISION SECTION ###
                         cheat_section_header = {
                             blockoverride "section_title" {
-                                text = "CHEAT_SECTION_VISION"
+                                text = "CHEAT_SECTION_GOVERNMENT"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/crown.dds"
+                            }
+                        }
+
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_REPUBLICAN_TRADITION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_REPUBLICAN_TRADITION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_republican_tradition_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_DEVOTION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_DEVOTION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_devotion_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_HORDE_UNITY"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_HORDE_UNITY_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_horde_unity_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_REFORM_PROGRESS"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_REFORM_PROGRESS_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_reform_progress_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_MAX_ABSOLUTISM"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_MAX_ABSOLUTISM_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_max_absolutism_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        ### RELIGION SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_RELIGION"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/religion.dds"
+                            }
+                        }
+
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_KARMA"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_KARMA_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_karma_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_HARMONY"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_HARMONY_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_harmony_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_DOOM"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_DOOM_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_doom_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        ### RESEARCH SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_RESEARCH"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/technology.dds"
+                            }
+                        }
+
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_RESEARCH_PROGRESS"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_RESEARCH_PROGRESS_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_research_progress_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_TOGGLE_RESEARCH_SPEED"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_TOGGLE_RESEARCH_SPEED_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_toggle_research_speed_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        ### BUFFS SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_BUFFS"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/buff.dds"
+                            }
+                        }
+
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_TOGGLE_SUPER_NATION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_TOGGLE_SUPER_NATION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_toggle_super_nation_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_TOGGLE_INSTANT_CONSTRUCTION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_TOGGLE_INSTANT_CONSTRUCTION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_toggle_instant_construction_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_TOGGLE_FAST_RECRUITMENT"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_TOGGLE_FAST_RECRUITMENT_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_toggle_fast_recruitment_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_TOGGLE_REDUCED_UNREST"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_TOGGLE_REDUCED_UNREST_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_toggle_reduced_unrest_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        ### MAP SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_MAP"
                             }
                             blockoverride "section_icon" {
                                 texture = "gfx/interface/icons/flat_icons/map.dds"
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_REMOVE_FOG"
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_REVEAL_MAP"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_REVEAL_MAP_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_reveal_map_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
                             }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_REMOVE_FOG_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('fow')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/fog_of_war.dds"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_LIFT_FOG_OF_WAR"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_LIFT_FOG_OF_WAR_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_lift_fog_of_war_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_REVEAL_MAP"
+                        ### PROVINCE SECTION ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_PROVINCE"
                             }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_REVEAL_MAP_TOOLTIP"
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/location.dds"
                             }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('discover')]"
+                        }
+
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_CHANGE_CULTURE"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_CHANGE_CULTURE_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_change_culture_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
                             }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/map.dds"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_CHANGE_RELIGION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_CHANGE_RELIGION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_change_religion_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
                             }
                         }
 
@@ -324,48 +621,80 @@ window = {
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_TOGGLE_AI"
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_REDUCE_WAR_EXHAUSTION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_REDUCE_WAR_EXHAUSTION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_reduce_war_exhaustion_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_TOGGLE_AI_TOOLTIP"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_REDUCE_CORRUPTION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_REDUCE_CORRUPTION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_reduce_corruption_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('ai')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/ai.dds"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_MERCANTILISM"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_MERCANTILISM_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_mercantilism_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
                             }
                         }
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_INTEGRATE"
-                            }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_INTEGRATE_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('integrate')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/diplomacy.dds"
-                            }
-                        }
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
 
-                        cheat_button = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_YESMAN"
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ADD_INNOVATIVENESS"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ADD_INNOVATIVENESS_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_innovativeness_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
                             }
-                            blockoverride "button_tooltip" {
-                                text = "CHEAT_YESMAN_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[ExecuteConsoleCommand('yesman')]"
-                            }
-                            blockoverride "button_icon" {
-                                texture = "gfx/interface/icons/flat_icons/diplomacy.dds"
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_REDUCE_INFLATION"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_REDUCE_INFLATION_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_reduce_inflation_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
                             }
                         }
 
@@ -386,50 +715,76 @@ window = {
 types cheat_section_header {
     type cheat_section_header = widget {
         layoutpolicy_horizontal = expanding
-        size = { -1 40 }
+        size = { 486 66 }
         margin_top = 8
         margin_bottom = 5
 
         background = {
-            using = color_light_blue_texture
-            alpha = 0.8
+            using = tile_background_squared_texture
+            margin = {-6 -6}
 
             modify_texture = {
-                texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
-                blend_mode = alphamultiply
+                using = color_dark_blue_texture
+            }
+
+            using = overlay_window
+            using = overlay_leather
+
+            modify_texture = {
+                texture = "gfx/interface/graphical_cultures/european_gfx/top_bar_bg.dds"
+                texture_density = 1
+                spriteType = corneredtiled
+                spriteborder = { 0 0 }
+                blend_mode = overlay
             }
         }
 
-        hbox = {
-            margin = { 10 8 }
-            spacing = 8
+        background = {
+            texture = "gfx/interface/graphical_cultures/european_gfx/top_bar_sideflavor.dds"
+            texture_density = 1.5
+            spriteType = Corneredstretched
+            spriteborder = { 20 0 }
+            alpha = 1
+            margin = {-12 -6}
 
-            icon = {
-                size = { 24 24 }
-                parentanchor = vcenter
+            modify_texture = {
+                using = color_intense_bg_blue_texture
+                blend_mode = multiply
+                alpha = 0.9
 
-                block "section_icon" {
-                    texture = "gfx/interface/icons/flat_icons/settings.dds"
-                }
-
-                modify_texture = {
-                    texture = "gfx/interface/colors/new_gold.dds"
-                    blend_mode = overlay
-                }
             }
+            modify_texture = {
+                using = color_progress_blue_texture
+                blend_mode = overlay
 
-            text_single = {
-                parentanchor = vcenter
-                align = nobaseline
-                using = Font_Type_Headers
-                using = Font_Size_Medium
-                default_format = "#high"
-
-                block "section_title" {
-                    text = "Section Title"
-                }
             }
         }
+
+        background = {
+            texture = "gfx/interface/graphical_cultures/european_gfx/pause_label_frame.dds"
+            texture_density = 2
+            spriteType = Corneredstretched
+            spriteborder = { 26 0 }
+        }
+
+        background = {
+            texture = "gfx/interface/graphical_cultures/european_gfx/pause_label_frame_gem.dds"
+            texture_density = 2
+            spriteType = Corneredstretched
+            spriteborder = { 26 0 }
+        }
+
+        text_single = {
+            # raw_text = "section_title"
+            parentanchor = center
+            align = center|nobaseline
+            using = Font_Type_Headers
+            using = Font_Size_Medium
+            block "section_title" {
+                raw_text = "Section Title"
+            }
+        }
+
     }
 }
 
@@ -437,83 +792,20 @@ types cheat_section_header {
 # Cheat Button Template
 ##############################
 types cheat_button {
-    type cheat_button = button_regular {
-        layoutpolicy_horizontal = expanding
-        size = { -1 45 }
 
-        background = {
-            using = bg_round_corners
-            alpha = 0.4
+    # Compact button for horizontal layout
+    type cheat_button_compact = button_regular {
 
-            modify_texture = {
-                texture = "gfx/interface/component_tiles/tile_background_center.dds"
-                texture_density = 2
-                alpha = 0.6
-            }
+        size = {190 38}
+        blockoverride "button_texture" {
+            texture = "gfx/interface/buttons/button_wax_blue.dds"
         }
 
-        # Hover state animation
-        state = {
-            name = _mouse_hierarchy_enter
-            using = Animation_Curve_Default
-            alpha = 0.9
-            duration = 0.15
+        align = center|nobaseline
+        using = Font_Type_Headers
 
-            modify_texture = {
-                texture = "gfx/interface/colors/new_gold.dds"
-                alpha = 0.2
-                blend_mode = overlay
-            }
-        }
-
-        state = {
-            name = _mouse_hierarchy_leave
-            using = Animation_Curve_Default
-            alpha = 1.0
-            duration = 0.15
-        }
-
-        hbox = {
-            margin = { 12 8 }
-            spacing = 10
-
-            # Icon
-            icon = {
-                size = { 28 28 }
-                parentanchor = vcenter
-
-                block "button_icon" {
-                    texture = "gfx/interface/icons/flat_icons/settings.dds"
-                }
-
-                modify_texture = {
-                    texture = "gfx/interface/colors/new_gold.dds"
-                    blend_mode = overlay
-                    alpha = 0.6
-                }
-            }
-
-            # Button text
-            text_single = {
-                layoutpolicy_horizontal = expanding
-                parentanchor = vcenter
-                align = left|nobaseline
-                using = Font_Type_Standard
-                using = Font_Size_Medium
-                default_format = "#clickable"
-
-                block "button_text" {
-                    text = "Cheat Button"
-                }
-            }
-
-            # Arrow indicator
-            icon = {
-                size = { 20 20 }
-                parentanchor = vcenter
-                texture = "gfx/interface/icons/flat_icons/arrow_right.dds"
-                alpha = 0.5
-            }
+        block "button_text" {
+            text = "Compact"
         }
 
         block "button_action" {
@@ -523,5 +815,7 @@ types cheat_button {
         block "button_tooltip" {
             tooltip = ""
         }
+
+
     }
 }

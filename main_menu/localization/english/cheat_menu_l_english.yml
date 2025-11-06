@@ -10,7 +10,12 @@
     CHEAT_SECTION_POWER: "Power Points"
     CHEAT_SECTION_DEVELOPMENT: "Development"
     CHEAT_SECTION_MILITARY: "Military"
-    CHEAT_SECTION_VISION: "Map Vision"
+    CHEAT_SECTION_GOVERNMENT: "Government"
+    CHEAT_SECTION_RELIGION: "Religion"
+    CHEAT_SECTION_RESEARCH: "Research"
+    CHEAT_SECTION_BUFFS: "Buffs & Modifiers"
+    CHEAT_SECTION_MAP: "Map & Vision"
+    CHEAT_SECTION_PROVINCE: "Province"
     CHEAT_SECTION_OTHER: "Other Cheats"
 
     # Economy Cheats
@@ -42,6 +47,10 @@
     # Military Cheats
     CHEAT_ADD_PROFESSIONALISM: "Max Army Professionalism"
     CHEAT_ADD_PROFESSIONALISM_TOOLTIP: "Set army professionalism to 100"
+    CHEAT_ADD_ARMY_TRADITION: "Add 100 Army Tradition"
+    CHEAT_ADD_ARMY_TRADITION_TOOLTIP: "Add 100 army tradition to your country"
+    CHEAT_ADD_NAVY_TRADITION: "Add 100 Navy Tradition"
+    CHEAT_ADD_NAVY_TRADITION_TOOLTIP: "Add 100 navy tradition to your country"
     CHEAT_WIN_WAR: "Win All Wars"
     CHEAT_WIN_WAR_TOOLTIP: "Instantly win all current wars"
 
@@ -52,6 +61,70 @@
     CHEAT_REVEAL_MAP_TOOLTIP: "Reveal all provinces on the map"
 
     # Other Cheats
+    CHEAT_REDUCE_WAR_EXHAUSTION: "Reduce War Exhaustion"
+    CHEAT_REDUCE_WAR_EXHAUSTION_TOOLTIP: "Reduce war exhaustion by 20"
+    CHEAT_REDUCE_CORRUPTION: "Reduce Corruption"
+    CHEAT_REDUCE_CORRUPTION_TOOLTIP: "Reduce corruption by 10"
+    CHEAT_ADD_MERCANTILISM: "Add 25 Mercantilism"
+    CHEAT_ADD_MERCANTILISM_TOOLTIP: "Add 25 mercantilism to your country"
+    CHEAT_ADD_INNOVATIVENESS: "Add 100 Innovativeness"
+    CHEAT_ADD_INNOVATIVENESS_TOOLTIP: "Add 100 innovativeness to your country"
+    CHEAT_REDUCE_INFLATION: "Reduce Inflation"
+    CHEAT_REDUCE_INFLATION_TOOLTIP: "Reduce inflation by 10"
+
+    # Government Cheats
+    CHEAT_ADD_REPUBLICAN_TRADITION: "Add Republican Tradition"
+    CHEAT_ADD_REPUBLICAN_TRADITION_TOOLTIP: "Add 100 republican tradition"
+    CHEAT_ADD_DEVOTION: "Add Devotion"
+    CHEAT_ADD_DEVOTION_TOOLTIP: "Add 100 devotion (for theocracies)"
+    CHEAT_ADD_HORDE_UNITY: "Add Horde Unity"
+    CHEAT_ADD_HORDE_UNITY_TOOLTIP: "Add 100 horde unity (for hordes)"
+    CHEAT_ADD_REFORM_PROGRESS: "Add Reform Progress"
+    CHEAT_ADD_REFORM_PROGRESS_TOOLTIP: "Add 1000 reform progress"
+    CHEAT_MAX_ABSOLUTISM: "Max Absolutism"
+    CHEAT_MAX_ABSOLUTISM_TOOLTIP: "Add 100 absolutism to your country"
+
+    # Religion Cheats
+    CHEAT_ADD_KARMA: "Add Karma"
+    CHEAT_ADD_KARMA_TOOLTIP: "Add 100 karma (for Buddhist nations)"
+    CHEAT_ADD_HARMONY: "Add Harmony"
+    CHEAT_ADD_HARMONY_TOOLTIP: "Add 100 harmony (for Confucian nations)"
+    CHEAT_ADD_DOOM: "Add Doom"
+    CHEAT_ADD_DOOM_TOOLTIP: "Add 100 doom (for Mayan nations)"
+    CHEAT_ADD_AUTHORITY: "Add Church Power"
+    CHEAT_ADD_AUTHORITY_TOOLTIP: "Add 100 church power"
+    CHEAT_ADD_FERVOR: "Add Fervor"
+    CHEAT_ADD_FERVOR_TOOLTIP: "Add 100 fervor (for Reformed nations)"
+
+    # Research Cheats
+    CHEAT_ADD_RESEARCH_PROGRESS: "Add Research Progress"
+    CHEAT_ADD_RESEARCH_PROGRESS_TOOLTIP: "Add 1000 research progress to all categories"
+    CHEAT_TOGGLE_RESEARCH_SPEED: "Toggle Research Speed"
+    CHEAT_TOGGLE_RESEARCH_SPEED_TOOLTIP: "Toggle +500% research speed modifier (permanent until toggled off)"
+
+    # Buff Cheats
+    CHEAT_TOGGLE_SUPER_NATION: "Toggle Super Nation"
+    CHEAT_TOGGLE_SUPER_NATION_TOOLTIP: "Toggle comprehensive nation buffs:\n+50% morale, +20% discipline\n+50% tax/production/trade\n-50% development/build costs\n+5 diplomatic reputation"
+    CHEAT_TOGGLE_INSTANT_CONSTRUCTION: "Toggle Fast Construction"
+    CHEAT_TOGGLE_INSTANT_CONSTRUCTION_TOOLTIP: "Toggle fast construction:\n-99% build time\n-75% build cost"
+    CHEAT_TOGGLE_FAST_RECRUITMENT: "Toggle Fast Recruitment"
+    CHEAT_TOGGLE_FAST_RECRUITMENT_TOOLTIP: "Toggle fast recruitment:\n-90% army recruitment time\n-90% navy recruitment time"
+    CHEAT_TOGGLE_REDUCED_UNREST: "Toggle Reduced Unrest"
+    CHEAT_TOGGLE_REDUCED_UNREST_TOOLTIP: "Toggle reduced unrest:\n-10 global unrest\n-75% stability cost"
+
+    # Map Cheats
+    CHEAT_REVEAL_MAP: "Reveal Map"
+    CHEAT_REVEAL_MAP_TOOLTIP: "Discover all provinces on the map"
+    CHEAT_LIFT_FOG_OF_WAR: "Lift Fog of War"
+    CHEAT_LIFT_FOG_OF_WAR_TOOLTIP: "Remove fog of war from all provinces"
+
+    # Province Cheats
+    CHEAT_CHANGE_CULTURE: "Convert Culture"
+    CHEAT_CHANGE_CULTURE_TOOLTIP: "Convert selected province to your culture"
+    CHEAT_CHANGE_RELIGION: "Convert Religion"
+    CHEAT_CHANGE_RELIGION_TOOLTIP: "Convert selected province to your religion"
+
+    # Legacy entries for compatibility
     CHEAT_TOGGLE_AI: "Toggle AI"
     CHEAT_TOGGLE_AI_TOOLTIP: "Toggle AI on/off for all countries"
     CHEAT_INTEGRATE: "Instant Integrate"
