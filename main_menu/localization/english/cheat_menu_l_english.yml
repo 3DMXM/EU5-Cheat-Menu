@@ -27,10 +27,12 @@
     CHEAT_ADD_SAILORS_TOOLTIP: "Add 50,000 sailors to your reserves"
 
     # Stability Cheats
-    CHEAT_ADD_STABILITY: "Max Stability"
-    CHEAT_ADD_STABILITY_TOOLTIP: "Set stability to maximum (3)"
-    CHEAT_ADD_LEGITIMACY: "Max Legitimacy"
-    CHEAT_ADD_LEGITIMACY_TOOLTIP: "Set legitimacy to 100"
+    CHEAT_MAX_STABILITY: "Max Stability"
+    CHEAT_MAX_STABILITY_TOOLTIP: "Set stability to maximum (100)"
+    CHEAT_ADD_STABILITY: "Add 1 Stability"
+    CHEAT_ADD_STABILITY_TOOLTIP: "Add 1 stability to your country"
+    CHEAT_MAX_LEGITIMACY: "Max Legitimacy"
+    CHEAT_MAX_LEGITIMACY_TOOLTIP: "Set legitimacy to 100"
     CHEAT_ADD_PRESTIGE: "Add 100 Prestige"
     CHEAT_ADD_PRESTIGE_TOOLTIP: "Add 100 prestige to your country"
 
@@ -101,6 +103,8 @@
     CHEAT_ADD_RESEARCH_PROGRESS_TOOLTIP: "Add 1000 research progress to all categories"
     CHEAT_TOGGLE_RESEARCH_SPEED: "Toggle Research Speed"
     CHEAT_TOGGLE_RESEARCH_SPEED_TOOLTIP: "Toggle +500% research speed modifier (permanent until toggled off)"
+    CHEAT_ADD_LITERACY: "Add Literacy"
+    CHEAT_ADD_LITERACY_TOOLTIP: "Add 50 literacy to your nation"
 
     # Buff Cheats
     CHEAT_TOGGLE_SUPER_NATION: "Toggle Super Nation"
@@ -113,6 +117,8 @@
     CHEAT_TOGGLE_REDUCED_UNREST_TOOLTIP: "Toggle reduced unrest:\n-10 global unrest\n-75% stability cost"
 
     # Map Cheats
+    CHEAT_DISCOVER_ALL_PROVINCES: "Discover All Provinces"
+    CHEAT_DISCOVER_ALL_PROVINCES_TOOLTIP: "Discover all provinces on the map"
     CHEAT_REVEAL_MAP: "Reveal Map"
     CHEAT_REVEAL_MAP_TOOLTIP: "Discover all provinces on the map"
     CHEAT_LIFT_FOG_OF_WAR: "Lift Fog of War"

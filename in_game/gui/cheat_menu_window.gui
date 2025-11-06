@@ -1,10 +1,10 @@
 ﻿##############################
-# Cheat Menu Window
+# 作弊菜单窗口
 ##############################
 
 window = {
     name = "cheat_menu_window"
-    size = { 650 850 }
+    size = {900 700 }
     parentanchor = center
     layer = windows_layer
     movable = yes
@@ -19,11 +19,11 @@ window = {
         using = Animation_FadeOut_Standard
     }
 
-    # Main window background with styling
+    # 主窗口背景样式
     using = bg_window_default_alt
     allow_outside = yes
 
-    # Close button in top-right corner
+    # 右上角关闭按钮
     widget = {
         parentanchor = top|right
         position = { -5 5 }
@@ -40,24 +40,24 @@ window = {
         }
     }
 
-    # Main container
+    # 主容器
     vbox = {
         using = window_margin_alt
 
-        # Header with close button
+        # 带关闭按钮的页眉
         window_header_alt = {
             blockoverride "header_text" {
                 text = "CHEAT_MENU_TITLE"
             }
         }
 
-        # Main content area with tabs
+        # 带标签的主内容区域
         vbox = {
             using = layoutpolicy_expanding
             using = bg_main_inner_notabs_alt
             using = window_main_tabs_margin_alt
 
-            # Scrollable content area
+            # 可滚动的内容区域
             scrollbox = {
                 layoutpolicy_horizontal = expanding
                 layoutpolicy_vertical = expanding
@@ -68,7 +68,7 @@ window = {
                         spacing = 8
                         margin = { 10 10 }
 
-                        ### ECONOMY SECTION ###
+                        ### 经济部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_ECONOMY"
@@ -123,7 +123,7 @@ window = {
                             }
                         }
 
-                        ### STABILITY SECTION ###
+                        ### 稳定性部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_STABILITY"
@@ -140,10 +140,10 @@ window = {
 
                             cheat_button_compact = {
                                 blockoverride "button_text" {
-                                    text = "CHEAT_ADD_STABILITY"
+                                    text = "CHEAT_MAX_STABILITY"
                                 }
                                 blockoverride "button_tooltip" {
-                                    tooltip = "CHEAT_ADD_STABILITY_TOOLTIP"
+                                    tooltip = "CHEAT_MAX_STABILITY_TOOLTIP"
                                 }
                                 blockoverride "button_action" {
                                     onclick = "[GetScriptedGui('cheat_max_stability_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -153,10 +153,23 @@ window = {
 
                             cheat_button_compact = {
                                 blockoverride "button_text" {
-                                    text = "CHEAT_ADD_LEGITIMACY"
+                                    text = "CHEAT_ADD_STABILITY"
                                 }
                                 blockoverride "button_tooltip" {
-                                    tooltip = "CHEAT_ADD_LEGITIMACY_TOOLTIP"
+                                    tooltip = "CHEAT_ADD_STABILITY_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_add_stability_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_MAX_LEGITIMACY"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_MAX_LEGITIMACY_TOOLTIP"
                                 }
                                 blockoverride "button_action" {
                                     onclick = "[GetScriptedGui('cheat_max_legitimacy_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -178,53 +191,53 @@ window = {
                             }
                         }
 
-                        ### POWER POINTS SECTION ###
-                        cheat_section_header = {
-                            blockoverride "section_title" {
-                                text = "CHEAT_SECTION_POWER"
-                            }
-                            blockoverride "section_icon" {
-                                texture = "gfx/interface/icons/flat_icons/power_points.dds"
-                            }
-                        }
+                        ### 君主点数 ###
+                        # cheat_section_header = {
+                        #     blockoverride "section_title" {
+                        #         text = "CHEAT_SECTION_POWER"
+                        #     }
+                        #     blockoverride "section_icon" {
+                        #         texture = "gfx/interface/icons/flat_icons/power_points.dds"
+                        #     }
+                        # }
 
-                        cheat_button_compact = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_POWER"
-                            }
-                            blockoverride "button_tooltip" {
-                                tooltip = "CHEAT_ADD_POWER_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[GetScriptedGui('cheat_add_power_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                            }
+                        # cheat_button_compact = {
+                        #     blockoverride "button_text" {
+                        #         text = "CHEAT_ADD_POWER"
+                        #     }
+                        #     blockoverride "button_tooltip" {
+                        #         tooltip = "CHEAT_ADD_POWER_TOOLTIP"
+                        #     }
+                        #     blockoverride "button_action" {
+                        #         onclick = "[GetScriptedGui('cheat_add_power_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        #     }
 
-                        }
+                        # }
 
-                        ### DEVELOPMENT SECTION ###
-                        cheat_section_header = {
-                            blockoverride "section_title" {
-                                text = "CHEAT_SECTION_DEVELOPMENT"
-                            }
-                            blockoverride "section_icon" {
-                                texture = "gfx/interface/icons/flat_icons/development.dds"
-                            }
-                        }
+                        ### 发展 ###
+                        # cheat_section_header = {
+                        #     blockoverride "section_title" {
+                        #         text = "CHEAT_SECTION_DEVELOPMENT"
+                        #     }
+                        #     blockoverride "section_icon" {
+                        #         texture = "gfx/interface/icons/flat_icons/development.dds"
+                        #     }
+                        # }
 
-                        cheat_button_compact = {
-                            blockoverride "button_text" {
-                                text = "CHEAT_ADD_DEVELOPMENT"
-                            }
-                            blockoverride "button_tooltip" {
-                                tooltip = "CHEAT_ADD_DEVELOPMENT_TOOLTIP"
-                            }
-                            blockoverride "button_action" {
-                                onclick = "[GetScriptedGui('cheat_add_development_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                            }
+                        # cheat_button_compact = {
+                        #     blockoverride "button_text" {
+                        #         text = "CHEAT_ADD_DEVELOPMENT"
+                        #     }
+                        #     blockoverride "button_tooltip" {
+                        #         tooltip = "CHEAT_ADD_DEVELOPMENT_TOOLTIP"
+                        #     }
+                        #     blockoverride "button_action" {
+                        #         onclick = "[GetScriptedGui('cheat_add_development_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                        #     }
 
-                        }
+                        # }
 
-                        ### MILITARY SECTION ###
+                        ### 军事部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_MILITARY"
@@ -279,7 +292,7 @@ window = {
                             }
                         }
 
-                        ### VISION SECTION ###
+                        ### 政府部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_GOVERNMENT"
@@ -363,7 +376,7 @@ window = {
                             }
                         }
 
-                        ### RELIGION SECTION ###
+                        ### 宗教部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_RELIGION"
@@ -416,7 +429,7 @@ window = {
                             }
                         }
 
-                        ### RESEARCH SECTION ###
+                        ### 研究部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_RESEARCH"
@@ -440,24 +453,24 @@ window = {
                                     tooltip = "CHEAT_ADD_RESEARCH_PROGRESS_TOOLTIP"
                                 }
                                 blockoverride "button_action" {
-                                    onclick = "[GetScriptedGui('cheat_add_research_progress_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onclick = "[GetScriptedGui('cheat_toggle_research_speed_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                                 }
                             }
 
                             cheat_button_compact = {
                                 blockoverride "button_text" {
-                                    text = "CHEAT_TOGGLE_RESEARCH_SPEED"
+                                    text = "CHEAT_ADD_LITERACY"
                                 }
                                 blockoverride "button_tooltip" {
-                                    tooltip = "CHEAT_TOGGLE_RESEARCH_SPEED_TOOLTIP"
+                                    tooltip = "CHEAT_ADD_LITERACY_TOOLTIP"
                                 }
                                 blockoverride "button_action" {
-                                    onclick = "[GetScriptedGui('cheat_toggle_research_speed_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onclick = "[GetScriptedGui('cheat_add_literacy_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                                 }
                             }
                         }
 
-                        ### BUFFS SECTION ###
+                        ### 增益部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_BUFFS"
@@ -529,7 +542,7 @@ window = {
                             }
                         }
 
-                        ### MAP SECTION ###
+                        ### 地图部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_MAP"
@@ -547,13 +560,13 @@ window = {
 
                             cheat_button_compact = {
                                 blockoverride "button_text" {
-                                    text = "CHEAT_REVEAL_MAP"
+                                    text = "CHEAT_DISCOVER_ALL_PROVINCES"
                                 }
                                 blockoverride "button_tooltip" {
-                                    tooltip = "CHEAT_REVEAL_MAP_TOOLTIP"
+                                    tooltip = "CHEAT_DISCOVER_ALL_PROVINCES_TOOLTIP"
                                 }
                                 blockoverride "button_action" {
-                                    onclick = "[GetScriptedGui('cheat_reveal_map_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onclick = "[GetScriptedGui('cheat_discover_all_provinces_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                                 }
                             }
 
@@ -570,7 +583,7 @@ window = {
                             }
                         }
 
-                        ### PROVINCE SECTION ###
+                        ### 省份部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_PROVINCE"
@@ -611,7 +624,7 @@ window = {
                             }
                         }
 
-                        ### OTHER SECTION ###
+                        ### 其他部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {
                                 text = "CHEAT_SECTION_OTHER"
@@ -698,7 +711,7 @@ window = {
                             }
                         }
 
-                        # Bottom spacer
+                        # 底部间距
                         widget = {
                             size = { 1 15 }
                         }
@@ -710,7 +723,7 @@ window = {
 }
 
 ##############################
-# Cheat Section Header Template
+# 作弊菜单章节页眉模板
 ##############################
 types cheat_section_header {
     type cheat_section_header = widget {
@@ -781,7 +794,7 @@ types cheat_section_header {
             using = Font_Type_Headers
             using = Font_Size_Medium
             block "section_title" {
-                raw_text = "Section Title"
+                raw_text = "章节标题"
             }
         }
 
@@ -789,11 +802,11 @@ types cheat_section_header {
 }
 
 ##############################
-# Cheat Button Template
+# 作弊按钮模板
 ##############################
 types cheat_button {
 
-    # Compact button for horizontal layout
+    # 水平布局的紧凑按钮
     type cheat_button_compact = button_regular {
 
         size = {190 38}
@@ -805,7 +818,7 @@ types cheat_button {
         using = Font_Type_Headers
 
         block "button_text" {
-            text = "Compact"
+            text = "紧凑"
         }
 
         block "button_action" {

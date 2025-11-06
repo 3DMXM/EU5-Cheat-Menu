@@ -27,10 +27,12 @@
     CHEAT_ADD_SAILORS_TOOLTIP: "向您的储备添加 50,000 水手"
 
     # 稳定度作弊
-    CHEAT_ADD_STABILITY: "最大稳定度"
-    CHEAT_ADD_STABILITY_TOOLTIP: "将稳定度设置为最大值 (100)"
-    CHEAT_ADD_LEGITIMACY: "最大正统性"
-    CHEAT_ADD_LEGITIMACY_TOOLTIP: "将正统性设置为 100"
+    CHEAT_MAX_STABILITY: "最大稳定度"
+    CHEAT_MAX_STABILITY_TOOLTIP: "将稳定度设置为最大值 (100)"
+    CHEAT_ADD_STABILITY: "添加 1 稳定度"
+    CHEAT_ADD_STABILITY_TOOLTIP: "向您的国家添加 1 稳定度"
+    CHEAT_MAX_LEGITIMACY: "最大正统性"
+    CHEAT_MAX_LEGITIMACY_TOOLTIP: "将正统性设置为 100"
     CHEAT_ADD_PRESTIGE: "添加 100 威望"
     CHEAT_ADD_PRESTIGE_TOOLTIP: "向您的国家添加 100 威望"
 
@@ -98,9 +100,11 @@
 
     # 研究作弊
     CHEAT_ADD_RESEARCH_PROGRESS: "添加研究进度"
-    CHEAT_ADD_RESEARCH_PROGRESS_TOOLTIP: "向所有类别添加 1000 研究进度"
+    CHEAT_ADD_RESEARCH_PROGRESS_TOOLTIP: " +500% 研究速度修正"
     CHEAT_TOGGLE_RESEARCH_SPEED: "切换研究速度"
-    CHEAT_TOGGLE_RESEARCH_SPEED_TOOLTIP: "切换 +500% 研究速度修正（永久有效直到切换关闭）"
+    CHEAT_TOGGLE_RESEARCH_SPEED_TOOLTIP: "切换 +500% 研究速度修正（切换以关闭）"
+    CHEAT_ADD_LITERACY: "添加识字率"
+    CHEAT_ADD_LITERACY_TOOLTIP: "向您的国家添加 50 识字率"
 
     # 增益作弊
     CHEAT_TOGGLE_SUPER_NATION: "切换超级国家"
@@ -113,6 +117,8 @@
     CHEAT_TOGGLE_REDUCED_UNREST_TOOLTIP: "切换减少叛乱：\n-10 全局叛乱\n-75% 稳定度成本"
 
     # 地图作弊
+    CHEAT_DISCOVER_ALL_PROVINCES: "发现所有省份"
+    CHEAT_DISCOVER_ALL_PROVINCES_TOOLTIP: "发现地图上的所有省份"
     CHEAT_REVEAL_MAP: "揭示地图"
     CHEAT_REVEAL_MAP_TOOLTIP: "发现地图上的所有省份"
     CHEAT_LIFT_FOG_OF_WAR: "移除战争迷雾"

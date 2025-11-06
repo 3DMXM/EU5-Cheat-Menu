@@ -1,0 +1,166 @@
+##############################
+# 作弊菜单 - 修改器和支持脚本
+##############################
+
+# 作弊菜单启用/禁用的状态修改器
+scripted_modifier = {
+    name = cheat_super_nation_modifier
+
+    icon = "gfx/interface/icons/modifiers/modifier_buff.dds"
+
+    build_cost = -0.5
+    recruitment_cost = -0.5
+    morale_damage = 0.5
+    unit_morale = 0.5
+}
+
+scripted_modifier = {
+    name = cheat_instant_construction_modifier
+
+    icon = "gfx/interface/icons/modifiers/modifier_buff.dds"
+
+    build_cost = -0.99
+    build_time = -0.99
+}
+
+scripted_modifier = {
+    name = cheat_fast_recruitment_modifier
+
+    icon = "gfx/interface/icons/modifiers/modifier_buff.dds"
+
+    recruitment_cost = -0.9
+    recruitment_time = -0.9
+}
+
+scripted_modifier = {
+    name = cheat_reduced_unrest_modifier
+
+    icon = "gfx/interface/icons/modifiers/modifier_buff.dds"
+
+    local_unrest = -2
+    unrest = -2
+}
+
+# 作弊菜单系统变量及触发条件
+scripted_trigger = {
+    name = cheat_is_super_nation_enabled
+
+    has_variable = cheat_super_nation_enabled
+}
+
+scripted_trigger = {
+    name = cheat_is_instant_construction_enabled
+
+    has_variable = cheat_instant_construction_enabled
+}
+
+scripted_trigger = {
+    name = cheat_is_fast_recruitment_enabled
+
+    has_variable = cheat_fast_recruitment_enabled
+}
+
+scripted_trigger = {
+    name = cheat_is_reduced_unrest_enabled
+
+    has_variable = cheat_reduced_unrest_enabled
+}
+
+scripted_trigger = {
+    name = cheat_is_research_speed_enabled
+
+    has_variable = cheat_research_speed_enabled
+}
+
+# 月度效果 - 应用启用的增益
+scripted_effect = {
+    name = cheat_apply_monthly_effects
+
+    if = {
+        limit = {
+            cheat_is_super_nation_enabled = yes
+        }
+        if = {
+            limit = {
+                has_modifier = cheat_super_nation_modifier
+            }
+        }
+        else = {
+            add_modifier = {
+                name = cheat_super_nation_modifier
+                duration = 1200
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            cheat_is_instant_construction_enabled = yes
+        }
+        if = {
+            limit = {
+                has_modifier = cheat_instant_construction_modifier
+            }
+        }
+        else = {
+            add_modifier = {
+                name = cheat_instant_construction_modifier
+                duration = 1200
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            cheat_is_fast_recruitment_enabled = yes
+        }
+        if = {
+            limit = {
+                has_modifier = cheat_fast_recruitment_modifier
+            }
+        }
+        else = {
+            add_modifier = {
+                name = cheat_fast_recruitment_modifier
+                duration = 1200
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            cheat_is_reduced_unrest_enabled = yes
+        }
+        if = {
+            limit = {
+                has_modifier = cheat_reduced_unrest_modifier
+            }
+        }
+        else = {
+            add_modifier = {
+                name = cheat_reduced_unrest_modifier
+                duration = 1200
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            cheat_is_research_speed_enabled = yes
+        }
+        add_research_progress = 0.5
+    }
+}
+
+# 用于检查特定选项卡的可见性
+scripted_trigger = {
+    name = cheat_is_player_country
+
+    is_player = yes
+}
+
+scripted_trigger = {
+    name = cheat_can_use_cheats
+
+    is_player = yes
+}

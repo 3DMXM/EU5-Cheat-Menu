@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "eu5-modifier-mcp": {
+            "command": "python",
+            // 文件 E:\GitHub\GlossMod\EU5-Modifier-Mcp\server.py
+            "args": ["E:\\GitHub\\GlossMod\\EU5-Modifier-Mcp\\server.py"],
+            "env": {
+                "PYTHONUNBUFFERED": "1"
+            }
+        }
+    }
+}
