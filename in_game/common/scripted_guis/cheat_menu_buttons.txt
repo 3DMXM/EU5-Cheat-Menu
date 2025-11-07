@@ -1,0 +1,642 @@
+##############################
+# 作弊菜单按钮 ScriptedGUI
+# 所有按钮功能的实现
+##############################
+
+# 经济部分 - 增加金币
+cheat_add_gold_button = {
+    scope = player_country
+
+    effect = {
+        add_gold = 10000
+    }
+}
+
+# 经济部分 - 增加人力
+cheat_add_manpower_button = {
+    scope = player_country
+
+    effect = {
+        add_manpower = 500000
+    }
+}
+
+# 经济部分 - 增加水手
+cheat_add_sailors_button = {
+    scope = player_country
+
+    effect = {
+        add_sailors = 500000
+    }
+}
+
+# 稳定性部分 - 最大化稳定性
+cheat_max_stability_button = {
+    scope = player_country
+
+    effect = {
+        set_stability = 100
+    }
+}
+
+# 稳定性部分 - 增加稳定性
+cheat_add_stability_button = {
+    scope = player_country
+
+    effect = {
+        add_stability = 1
+    }
+}
+
+# 稳定性部分 - 最大化合法性
+cheat_max_legitimacy_button = {
+    scope = player_country
+
+    effect = {
+        set_legitimacy = 100
+    }
+}
+
+# 稳定性部分 - 增加声望
+cheat_add_prestige_button = {
+    scope = player_country
+
+    effect = {
+        add_prestige = 500
+    }
+}
+
+# 军事部分 - 增加专业性
+cheat_max_professionalism_button = {
+    scope = player_country
+
+    effect = {
+        set_professionalism = 100
+    }
+}
+
+# 军事部分 - 增加陆军传统
+cheat_add_army_tradition_button = {
+    scope = player_country
+
+    effect = {
+        land_morale_modifier = 100
+    }
+}
+
+# 军事部分 - 增加海军传统
+cheat_add_navy_tradition_button = {
+    scope = player_country
+
+    effect = {
+        naval_range = 100
+    }
+}
+
+# 政府部分 - 增加共和传统
+cheat_add_republican_tradition_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_republican_tradition
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 政府部分 - 增加虔诚
+cheat_add_devotion_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_devotion
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 政府部分 - 增加游牧民团结
+cheat_add_horde_unity_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_horde_unity
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 政府部分 - 增加改革进度
+cheat_add_reform_progress_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_reform_progress
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 政府部分 - 最大化绝对主义
+cheat_max_absolutism_button = {
+    scope = player_country
+
+    effect = {
+        set_absolutism = 120
+    }
+}
+
+# 宗教部分 - 增加业力
+cheat_add_karma_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_karma
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 宗教部分 - 增加和谐
+cheat_add_harmony_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_harmony
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 宗教部分 - 增加末日
+cheat_add_doom_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_doom
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 研究部分 - 切换研究速度
+cheat_toggle_research_speed_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_toggle_research_speed }
+            remove_country_modifier = cheat_toggle_research_speed
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_toggle_research_speed
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 研究部分 - 增加识字率
+cheat_add_literacy_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_literacy
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 增益部分 - 切换超级国家
+cheat_toggle_super_nation_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_super_nation }
+            remove_country_modifier = cheat_super_nation
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_super_nation
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 增益部分 - 切换即时建造
+cheat_toggle_instant_construction_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_instant_construction }
+            remove_country_modifier = cheat_instant_construction
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_instant_construction
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 增益部分 - 切换快速招募
+cheat_toggle_fast_recruitment_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_fast_recruitment }
+            remove_country_modifier = cheat_fast_recruitment
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_fast_recruitment
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 增益部分 - 切换降低动乱
+cheat_toggle_reduced_unrest_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_reduced_unrest }
+            remove_country_modifier = cheat_reduced_unrest
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_reduced_unrest
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 高级加速 - 研究速度50%
+# cheat_research_speed_50_button = {
+#     scope = player_country
+
+#     effect = {
+#         if = {
+#             limit = { has_country_modifier = cheat_research_speed_max }
+#             remove_country_modifier = cheat_research_speed_max
+#         }
+#         if = {
+#             limit = { has_country_modifier = cheat_research_speed_50 }
+#             remove_country_modifier = cheat_research_speed_50
+#         }
+#         else = {
+#             add_country_modifier = {
+#                 name = cheat_research_speed_50
+#                 days = -1
+#                 mode = add
+#             }
+#         }
+#     }
+# }
+
+# 高级加速 - 研究速度最大
+cheat_research_speed_max_button = {
+    scope = player_country
+
+    effect = {
+        # if = {
+        #     limit = { has_country_modifier = cheat_research_speed_50 }
+        #     remove_country_modifier = cheat_research_speed_50
+        # }
+        # if = {
+        #     limit = { has_country_modifier = cheat_research_speed_max }
+        #     remove_country_modifier = cheat_research_speed_max
+        # }
+        # else = {
+        #     add_country_modifier = {
+        #         modifier = cheat_research_speed_max
+        #         years = 999
+        #         mode = add
+        #     }
+        # }
+
+        add_country_modifier = {
+            modifier = cheat_research_speed_max
+            years = 999
+            mode = add
+        }
+
+    }
+}
+
+# 高级加速 - 行军速度50%
+cheat_march_speed_50_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_march_speed_max }
+            remove_country_modifier = cheat_march_speed_max
+        }
+        if = {
+            limit = { has_country_modifier = cheat_march_speed_50 }
+            remove_country_modifier = cheat_march_speed_50
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_march_speed_50
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 高级加速 - 行军速度最大
+cheat_march_speed_max_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_march_speed_50 }
+            remove_country_modifier = cheat_march_speed_50
+        }
+        if = {
+            limit = { has_country_modifier = cheat_march_speed_max }
+            remove_country_modifier = cheat_march_speed_max
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_march_speed_max
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 高级加速 - 收入提升50%
+cheat_income_50_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_income_max }
+            remove_country_modifier = cheat_income_max
+        }
+        if = {
+            limit = { has_country_modifier = cheat_income_50 }
+            remove_country_modifier = cheat_income_50
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_income_50
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 高级加速 - 收入提升最大
+cheat_income_max_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_income_50 }
+            remove_country_modifier = cheat_income_50
+        }
+        if = {
+            limit = { has_country_modifier = cheat_income_max }
+            remove_country_modifier = cheat_income_max
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_income_max
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 高级加速 - 建造速度50%
+cheat_build_speed_50_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_build_speed_max }
+            remove_country_modifier = cheat_build_speed_max
+        }
+        if = {
+            limit = { has_country_modifier = cheat_build_speed_50 }
+            remove_country_modifier = cheat_build_speed_50
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_build_speed_50
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 高级加速 - 建造速度最大
+cheat_build_speed_max_button = {
+    scope = player_country
+
+    effect = {
+        if = {
+            limit = { has_country_modifier = cheat_build_speed_50 }
+            remove_country_modifier = cheat_build_speed_50
+        }
+        if = {
+            limit = { has_country_modifier = cheat_build_speed_max }
+            remove_country_modifier = cheat_build_speed_max
+        }
+        else = {
+            add_country_modifier = {
+                name = cheat_build_speed_max
+                days = -1
+                mode = add
+            }
+        }
+    }
+}
+
+# 高级加速 - 启用所有速度加成
+cheat_enable_all_speeds_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_research_speed_max
+            days = -1
+            mode = add
+        }
+        add_country_modifier = {
+            name = cheat_march_speed_max
+            days = -1
+            mode = add
+        }
+        add_country_modifier = {
+            name = cheat_income_max
+            days = -1
+            mode = add
+        }
+        add_country_modifier = {
+            name = cheat_build_speed_max
+            days = -1
+            mode = add
+        }
+    }
+}
+
+# 高级加速 - 禁用所有速度加成
+cheat_disable_all_speeds_button = {
+    scope = player_country
+
+    effect = {
+        remove_country_modifier = cheat_research_speed_50
+        remove_country_modifier = cheat_research_speed_max
+        remove_country_modifier = cheat_march_speed_50
+        remove_country_modifier = cheat_march_speed_max
+        remove_country_modifier = cheat_income_50
+        remove_country_modifier = cheat_income_max
+        remove_country_modifier = cheat_build_speed_50
+        remove_country_modifier = cheat_build_speed_max
+    }
+}
+
+# 地图部分 - 发现所有省份
+cheat_discover_all_provinces_button = {
+    scope = player_country
+
+    effect = {
+        every_province = {
+            add_permanent_claim = ROOT
+        }
+    }
+}
+
+# 地图部分 - 解除战争迷雾
+cheat_lift_fog_of_war_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_lift_fog_of_war
+            days = -1
+            mode = add
+        }
+    }
+}
+
+# 省份部分 - 改变文化
+cheat_change_culture_button = {
+    scope = player_country
+
+    effect = {
+        # 此功能需要用户在省份视图中选择目标
+        # 这里只作为占位符
+    }
+}
+
+# 省份部分 - 改变宗教
+cheat_change_religion_button = {
+    scope = player_country
+
+    effect = {
+        # 此功能需要用户在省份视图中选择目标
+        # 这里只作为占位符
+    }
+}
+
+# 其他部分 - 减少战争疲劳
+cheat_reduce_war_exhaustion_button = {
+    scope = player_country
+
+    effect = {
+        add_war_exhaustion = -10
+    }
+}
+
+# 其他部分 - 降低腐败
+cheat_reduce_corruption_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_reduce_corruption
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 其他部分 - 增加重商主义
+cheat_add_mercantilism_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_mercantilism
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 其他部分 - 增加创新性
+cheat_add_innovativeness_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_add_innovativeness
+            days = 1
+            mode = add
+        }
+    }
+}
+
+# 其他部分 - 减少通货膨胀
+cheat_reduce_inflation_button = {
+    scope = player_country
+
+    effect = {
+        add_country_modifier = {
+            name = cheat_reduce_inflation
+            days = 1
+            mode = add
+        }
+    }
+}

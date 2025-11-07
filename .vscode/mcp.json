@@ -1,6 +1,6 @@
 {
     "servers": {
-        "eu5-modifier-mcp": {
+        "eu5-Modding-mcp": {
             "command": "python",
             // 文件 E:\GitHub\GlossMod\EU5-Modifier-Mcp\server.py
             "args": ["E:\\GitHub\\GlossMod\\EU5-Modifier-Mcp\\server.py"],

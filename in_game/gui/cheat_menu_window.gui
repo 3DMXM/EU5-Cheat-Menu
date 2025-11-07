@@ -542,6 +542,176 @@ window = {
                             }
                         }
 
+                        ### 高级加速部分 ###
+                        cheat_section_header = {
+                            blockoverride "section_title" {
+                                text = "CHEAT_SECTION_ADVANCED_SPEED"
+                            }
+                            blockoverride "section_icon" {
+                                texture = "gfx/interface/icons/flat_icons/speed.dds"
+                            }
+                        }
+
+                        # 研究速度行
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            # cheat_button_compact = {
+                            #     blockoverride "button_text" {
+                            #         text = "CHEAT_RESEARCH_SPEED_50"
+                            #     }
+                            #     blockoverride "button_tooltip" {
+                            #         tooltip = "CHEAT_RESEARCH_SPEED_50_TOOLTIP"
+                            #     }
+                            #     blockoverride "button_action" {
+                            #         onclick = "[GetScriptedGui('cheat_research_speed_50_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                            #     }
+                            # }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_RESEARCH_SPEED_MAX"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_RESEARCH_SPEED_MAX_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_research_speed_max_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        # 行军速度行
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_MARCH_SPEED_50"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_MARCH_SPEED_50_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_march_speed_50_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_MARCH_SPEED_MAX"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_MARCH_SPEED_MAX_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_march_speed_max_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        # 收入提升行
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_INCOME_50"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_INCOME_50_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_income_50_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_INCOME_MAX"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_INCOME_MAX_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_income_max_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        # 建造速度行
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_BUILD_SPEED_50"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_BUILD_SPEED_50_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_build_speed_50_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_BUILD_SPEED_MAX"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_BUILD_SPEED_MAX_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_build_speed_max_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
+                        # 全局控制行
+                        flowcontainer = {
+                            direction = horizontal
+                            spacing = 5
+                            layoutpolicy_horizontal = expanding
+                            ignoreinvisible = yes
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_ENABLE_ALL_SPEEDS"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_ENABLE_ALL_SPEEDS_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_enable_all_speeds_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+
+                            cheat_button_compact = {
+                                blockoverride "button_text" {
+                                    text = "CHEAT_DISABLE_ALL_SPEEDS"
+                                }
+                                blockoverride "button_tooltip" {
+                                    tooltip = "CHEAT_DISABLE_ALL_SPEEDS_TOOLTIP"
+                                }
+                                blockoverride "button_action" {
+                                    onclick = "[GetScriptedGui('cheat_disable_all_speeds_button').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                }
+                            }
+                        }
+
                         ### 地图部分 ###
                         cheat_section_header = {
                             blockoverride "section_title" {

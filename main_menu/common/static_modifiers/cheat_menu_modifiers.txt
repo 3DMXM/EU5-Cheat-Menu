@@ -1,0 +1,196 @@
+##############################
+# 作弊菜单 Buff 修正器
+# 所有持续生效的游戏效果
+##############################
+
+##############################
+# 研究速度相关
+##############################
+
+cheat_research_speed_max = {
+    # technology_cost = -0.9
+    # idea_cost = -0.9
+    game_data = { category = country }
+    research_speed = 500.0
+}
+
+##############################
+# 行军速度相关
+##############################
+
+# cheat_march_speed_50 = {
+#     game_data = { category = country }
+#     army_movement_speed = 0.5
+# }
+
+cheat_march_speed_max = {
+    game_data = { category = country }
+    army_movement_speed = 100
+}
+
+##############################
+# 收入相关
+##############################
+
+cheat_income_50 = {
+    trade_goods_size = 0.5
+    global_trade_goods_size = 0.5
+    merchants = 0.5
+    trade_efficiency = 0.5
+    tariffs = 0.5
+}
+
+cheat_income_max = {
+    trade_goods_size = 2.0
+    global_trade_goods_size = 2.0
+    merchants = 2.0
+    trade_efficiency = 2.0
+    tariffs = 2.0
+}
+
+##############################
+# 建造速度相关
+##############################
+
+cheat_build_speed_50 = {
+    build_time = -0.5
+}
+
+cheat_build_speed_max = {
+    build_time = -0.9
+}
+
+##############################
+# 超级国家 - 综合加成
+##############################
+
+cheat_super_nation = {
+    # 经济加成
+    trade_goods_size = 1.0
+    merchants = 1.0
+
+    # 军事加成
+    land_forcelimit = 1.0
+    naval_forcelimit = 1.0
+    global_regiment_recruit_speed = -0.5
+    ship_recruit_speed = -0.5
+
+    # 研究和文化加成
+    technology_cost = -0.75
+    idea_cost = -0.75
+
+    # 稳定性相关
+    stability_cost_to_declare_war = -0.5
+
+    # 外交
+    diplomatic_reputation = 2.0
+}
+
+##############################
+# 即时建造
+##############################
+
+cheat_instant_construction = {
+    build_time = -1.0
+    build_cost = -1.0
+}
+
+##############################
+# 快速招募
+##############################
+
+cheat_fast_recruitment = {
+    land_forcelimit = 1.0
+    naval_forcelimit = 1.0
+    global_regiment_recruit_speed = -0.9
+    ship_recruit_speed = -0.9
+}
+
+##############################
+# 降低动乱
+##############################
+
+cheat_reduced_unrest = {
+    unrest = -10
+    rebellion_development_effect = -0.75
+}
+
+##############################
+# 消除战争迷雾
+##############################
+
+cheat_lift_fog_of_war = {
+    global_trade_goods_size = 0
+}
+
+##############################
+# 政府相关修正器
+##############################
+
+cheat_add_republican_tradition = {
+    republican_tradition = 0.5
+}
+
+cheat_add_devotion = {
+    devotion = 0.5
+}
+
+cheat_add_horde_unity = {
+    horde_unity = 0.5
+}
+
+cheat_add_reform_progress = {
+    reform_progress_growth = 0.5
+}
+
+##############################
+# 宗教相关修正器
+##############################
+
+cheat_add_karma = {
+    karma = 0.5
+}
+
+cheat_add_harmony = {
+    harmony = 0.5
+}
+
+cheat_add_doom = {
+    doom = 0.5
+}
+
+##############################
+# 知识和技术相关
+##############################
+
+cheat_toggle_research_speed = {
+    technology_cost = -0.75
+    idea_cost = -0.75
+}
+
+cheat_add_literacy = {
+    monarch_skill_levels = 1
+    embracement_speed = 1.0
+}
+
+##############################
+# 腐败和其他经济相关
+##############################
+
+cheat_reduce_corruption = {
+    corruption_modifier = -0.5
+}
+
+cheat_add_mercantilism = {
+    global_trade_goods_size = 0.5
+}
+
+cheat_add_innovativeness = {
+    technology_cost = -0.3
+    idea_cost = -0.3
+    embracement_speed = 0.5
+}
+
+cheat_reduce_inflation = {
+    inflation_reduction = 0.5
+}
